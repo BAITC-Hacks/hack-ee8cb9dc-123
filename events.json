@@ -1,0 +1,10 @@
+[
+  {"id": 1, "level": "critical", "message": "disk 90%"},
+  {"id": 2, "level": "info", "message": "user login"},
+  {"id": 3, "level": "info", "message": "cpu 40%"},
+  {"id": 4, "level": "critical", "message": "payment failed"},
+  {"id": 5, "level": "info", "message": "heartbeat"},
+  {"id": 6, "level": "critical", "message": "db timeout"},
+  {"id": 7, "level": "warn", "message": "cache miss"},
+  {"id": 8, "level": "info", "message": "deploy ok"}
+]

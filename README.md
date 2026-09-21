@@ -36,3 +36,30 @@ python3 classify.py --test     # self-check
 
 5 из 5 — ожидаемо. LLM не использовали: на таком объёме правила дают тот же
 результат без ключей и сети.
+
+---
+
+# Фильтр алертов
+
+Скрипт читает `events.json` (8 событий info/warn/critical), печатает только
+`critical` и строку summary.
+
+## Как запустить
+
+```bash
+python3 filter_alerts.py           # разбор events.json
+python3 filter_alerts.py my.json   # свой файл
+python3 filter_alerts.py --test    # self-check
+```
+
+## Что получилось
+
+```
+[critical] #1 disk 90%
+[critical] #4 payment failed
+[critical] #6 db timeout
+критичных 3
+```
+
+Внутри — один `if` внутри list comprehension по `level == "critical"`,
+никаких зависимостей.
